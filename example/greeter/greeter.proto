@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package greeter;
+package example.greeter;
 
-option go_package="github.com/lukasjarosch/microservice-structure-protobuf/greeter";
+option go_package="github.com/lukasjarosch/microservice-structure-protobuf/example/greeter";
 
 import "google/api/annotations.proto";
 import "protoc-gen-swagger/options/annotations.proto";

@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "greeter/greeter.proto",
+    "title": "example/greeter/greeter.proto",
     "version": "version not set"
   },
   "schemes": [
