@@ -9,22 +9,16 @@ for dir in $PROTO_ROOT/*/ ; do
 
     pushd $dir > /dev/null
 
-    protoc -I$GOPATH/src \
-        -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway \
-        -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-        --proto_path=. --go_out=plugins=grpc:. *.proto
+    mkdir -p swagger gateway
 
-    mkdir -p $dir/gateway
     protoc -I$GOPATH/src \
         -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway \
         -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-        --proto_path=. --grpc-gateway_out=logtostderr=true:./gateway/ *.proto
-
-    mkdir -p $dir/swagger
-    protoc -I$GOPATH/src \
-        -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway \
-        -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-        --proto_path=. --swagger_out=logtostderr=true:./swagger/ *.proto
+        --proto_path=. \
+        --go_out=paths=source_relative,plugins=grpc:. \
+        --grpc-gateway_out=logtostderr=true,paths=source_relative:./gateway/ \
+        --swagger_out=logtostderr=true:./swagger/ \
+        *.proto
     echo "DONE!"
 
     popd > /dev/null
