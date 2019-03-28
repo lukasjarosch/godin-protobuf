@@ -1,4 +1,4 @@
-# microservice-structure-protobuf
+# godin-protobuf
  > Central repo to hold all protobuf definitions 
  
 ### Styleguide
