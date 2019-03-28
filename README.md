@@ -7,6 +7,10 @@ This repository uses the [Uber Protobuf Styleguide v2](https://github.com/uber/p
 It's enforced by using uber's [prototool](https://github.com/uber/prototool) which also takes care of creating
 and generating the protobuf stubs.
 
+### Git hooks
+To setup the git-hooks, run `./scripts/install-githooks.sh` from the repository root.
+You can remove them by running `./scripts/uninstall-githooks.sh`.
+
 ### Quickstart
 You need to have *prototool* installed and set-up.
 
