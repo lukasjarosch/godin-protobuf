@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package godin.user.account.v1;
+
+option csharp_namespace = "Godin.User.Account.V1";
+option go_package = "accountv1";
+option java_multiple_files = true;
+option java_outer_classname = "AccountApiProto";
+option java_package = "com.godin.user.account.v1";
+option objc_class_prefix = "GUA";
+option php_namespace = "Godin\\User\\Account\\V1";
+
+import "godin/user/account/v1/account.proto";
+
+// Handle all account related requests.
+service AccountAPI {
+    // Return an account given it's ID.
+    rpc GetAccount(GetAccountRequest) returns (GetAccountResponse);
+}
+
+message GetAccountRequest {
+   string id = 1;
+}
+
+message GetAccountResponse {
+   Account account = 1;
+}
