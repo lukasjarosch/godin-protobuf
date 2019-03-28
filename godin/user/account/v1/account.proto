@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package godin.user.account.v1;
+
+option csharp_namespace = "Godin.User.Account.V1";
+option go_package = "accountv1";
+option java_multiple_files = true;
+option java_outer_classname = "AccountProto";
+option java_package = "com.godin.user.account.v1";
+option objc_class_prefix = "GUA";
+option php_namespace = "Godin\\User\\Account\\V1";
+
+import "google/protobuf/timestamp.proto";
+
+// Account is the central user element. Everything belongs to one account.
+message Account {
+    string id = 1;
+    string email = 2;
+    google.protobuf.Timestamp created_time = 3;
+}

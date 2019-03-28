@@ -1,0 +1,10 @@
+protoc:
+  version: 3.7.0
+lint:
+  group: uber2
+
+generate:
+  plugins:
+    - name: go
+      flags: plugins=grpc
+      output: ./gen/proto/go
