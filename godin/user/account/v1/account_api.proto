@@ -23,5 +23,5 @@ message GetAccountRequest {
 }
 
 message GetAccountResponse {
-   Account account = 1;
+    Account account = 1;
 }
