@@ -22,6 +22,9 @@ You need to have *prototool* installed and set-up.
 provide some nice insights and tips which you might find helpful
 
 
+### Repos
+Currently only Golang is configured, so there is only one automatic repo: [lukasjarosch/godin-api-go](https://github.com/lukasjarosch/godin-api-go)
+
 ### General workflow
 To illustrate a general workflow I will use a simple example.
 Imagine you want to create a `mail` service. 
