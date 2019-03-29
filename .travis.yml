@@ -1,4 +1,5 @@
 language: go
+sudo: required
 
 go:
   - 1.12.x
@@ -11,6 +12,8 @@ install:
 
 script:
   - ./scripts/prototool.sh generate
-  - ls -la
+  - sudo chown -R travis: gen
   - ./scripts/push.sh
   - ls -la
+  - ls -la gen
+  - ls -la gen/go
