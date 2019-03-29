@@ -9,3 +9,5 @@ option java_outer_classname = "MailProto";
 option java_package = "com.godin.mail.v1";
 option objc_class_prefix = "GMX";
 option php_namespace = "Godin\\Mail\\V1";
+
+message Mail {}
