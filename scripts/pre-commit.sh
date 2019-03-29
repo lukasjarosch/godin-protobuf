@@ -14,7 +14,7 @@ lines=$($PROTOTOOL lint)
 for line in "$lines";
 do
 	if [ "$line" != "" ]; then
-        echo -e "> ${CYAN}Linter${NC}: " $line
+        echo -e "$line"
         HAS_ERR=true
 	fi
 done
@@ -25,7 +25,7 @@ lines=$($PROTOTOOL break check)
 for line in "$lines";
 do
 	if [ "$line" != "" ]; then
-        echo -e "> ${RED}BREAKING CHANGE${NC}: " $line
+        echo -e "> ${RED}BREAKING CHANGE${NC}: $line"
         HAS_ERR=true
 	fi
 done

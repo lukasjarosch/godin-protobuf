@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package godin.greeter.v1beta1;
+
+option csharp_namespace = "Godin.Greeter.V1Beta1";
+option go_package = "greeterv1beta1";
+option java_multiple_files = true;
+option java_outer_classname = "GreeterProto";
+option java_package = "com.godin.greeter.v1beta1";
+option objc_class_prefix = "GGX";
+option php_namespace = "Godin\\Greeter\\V1Beta1";
+
