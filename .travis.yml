@@ -10,5 +10,6 @@ install:
   - docker pull uber/prototool:latest
 
 script:
-  - docker run -v .:/work uber/prototool:latest prototool generate
+  - USER="$(id -u):$(id -g)"
+  - docker run -v "$(pwd)":/work uber/prototool:latest prototool generate
   - ./scripts/push.sh
