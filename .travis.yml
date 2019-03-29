@@ -12,7 +12,6 @@ install:
 
 script:
   - ./scripts/prototool.sh generate
-  - sudo chown -R travis: gen
   - ./scripts/push.sh
   - ls -la
   - ls -la gen
