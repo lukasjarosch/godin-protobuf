@@ -11,6 +11,7 @@ install:
   - docker pull uber/prototool:latest
 
 script:
+  - mkdir -p gen/go
   - ./scripts/prototool.sh generate
   - ./scripts/push.sh
   - ls -la
