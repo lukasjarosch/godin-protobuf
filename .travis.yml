@@ -2,5 +2,8 @@ language: go
 go:
   - 1.12.x
 
+install:
+  - GO111MODULE=on go get github.com/uber/prototool/cmd/prototool
+
 script:
-  - docker run -v "$(pwd):/work" uber/prototool:latest prototool generate
+  - ./scripts/build.sh
