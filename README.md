@@ -1,4 +1,4 @@
-# godin-protobuf
+# godin-protobuf [![Build Status](https://travis-ci.org/lukasjarosch/godin-protobuf.svg?branch=develop)](https://travis-ci.org/lukasjarosch/godin-protobuf)
  > Central repo to hold all protobuf definitions 
  
 ### Styleguide
