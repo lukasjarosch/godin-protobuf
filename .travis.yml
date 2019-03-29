@@ -2,5 +2,5 @@ language: go
 go:
   - 1.12.x
 
-script: ./scripts/build.sh
-deploy: ./scripts/deploy.sh
+script:
+  - docker run -v "$(pwd):/work" uber/prototool:latest prototool generate
