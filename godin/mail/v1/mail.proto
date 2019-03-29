@@ -10,4 +10,6 @@ option java_package = "com.godin.mail.v1";
 option objc_class_prefix = "GMX";
 option php_namespace = "Godin\\Mail\\V1";
 
-message Mail {}
+message Mail {
+    string title = 1;
+}

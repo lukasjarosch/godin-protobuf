@@ -11,8 +11,6 @@ function clone() {
 }
 
 function copyStubs() {
-	echo "FROM $GEN_PATH/*"
-	echo "TO $REPO_PATH/"
 	cp -R $GEN_PATH/* $REPO_PATH/
 }
 
@@ -40,13 +38,6 @@ function commitAndPush() {
 	leaveDir
 }
 
-function clone() {
-	rm -rf "$REPO_PATH"
-	echo "Cloning into repo: $REPO"
-	git clone $REPO "$REPO_PATH"
-	git fetch
-}
-
 # Helper for adding a directory to the stack and echoing the result
 function enterDir {
   pushd $1 > /dev/null
@@ -60,6 +51,3 @@ function leaveDir {
 clone
 copyStubs
 commitAndPush $REPO_PATH
-
-# remove all generated stuff, no need to keep it in this repo
-rm -rf $GEN_PATH
