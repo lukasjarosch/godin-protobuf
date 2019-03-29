@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 REPO="https://${GH_TOKEN}@github.com/lukasjarosch/godin-api-go.git"
 REPO_PATH="$(pwd)/godin-api-go"
-COMMIT=$(git rev-parse HEAD)
+COMMIT=$(git rev-parse --short HEAD)
 GEN_PATH="$(pwd)/gen/go"
 
 function clone() {
@@ -29,7 +29,7 @@ function commitAndPush() {
 	if ! git diff --no-ext-diff --quiet --exit-code; then
 		git add .
 		git status
-		git commit -m "[lukasjarosch/godin-protobuf@SHA$COMMIT]: Automatic generation of Go protobuf stubs"
+		git commit -m "[lukasjarosch/godin-protobuf@$COMMIT]: Automatic generation of Go protobuf stubs"
 		git push
 	else
 		echo "No changes detected for $1"
