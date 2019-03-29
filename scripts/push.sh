@@ -57,9 +57,6 @@ function leaveDir {
   popd > /dev/null
 }
 
-# Generate all protobuf stubs (currently only Go)
-#$(which prototool) generate
-docker run -v "$(pwd):/work" uber/prototool:latest prototool generate
 clone
 copyStubs
 commitAndPush $REPO_PATH

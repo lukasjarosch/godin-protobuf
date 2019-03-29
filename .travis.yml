@@ -1,11 +1,14 @@
 language: go
+
 go:
   - 1.12.x
 
+services:
+  - docker
+
 install:
-  - GO111MODULE=on go get github.com/uber/prototool/cmd/prototool
-  - go get -v -d google.golang.org/grpc
-  - go get -v -d -t github.com/golang/protobuf/...
+  - docker pull uber/prototool:latest
 
 script:
-  - ./scripts/build.sh
+  - docker run -v .:/work uber/prototool:latest prototool generate
+  - ./scripts/push.sh
