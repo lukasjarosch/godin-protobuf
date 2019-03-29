@@ -13,4 +13,5 @@ option php_namespace = "Godin\\Mail\\V1";
 message Mail {
     string title = 1;
     string body = 2;
+    string authorEmail = 3;
 }
