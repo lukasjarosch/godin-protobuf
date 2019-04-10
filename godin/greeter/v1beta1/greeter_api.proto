@@ -14,6 +14,8 @@ option php_namespace = "Godin\\Greeter\\V1Beta1";
 service GreeterAPI {
     // Say hello.
     rpc Hello(HelloRequest) returns (HelloResponse);
+    rpc Burp(BurpRequest) returns (BurpResponse);
+    rpc Goodbye(GoodbyeRequest) returns (GoodbyeResponse);
 }
 
 message HelloRequest {
@@ -23,3 +25,9 @@ message HelloRequest {
 message HelloResponse {
     string greeting = 1;
 }
+
+message BurpRequest {}
+message BurpResponse {}
+
+message GoodbyeRequest {}
+message GoodbyeResponse {}
